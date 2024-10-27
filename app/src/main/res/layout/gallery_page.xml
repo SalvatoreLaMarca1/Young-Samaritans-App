@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="600dp"
+    android:layout_height="400dp"
+    android:background="@drawable/rectangle_border">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <ListView
+                android:id="@+id/imageList"
+                android:layout_width="400dp"
+                android:layout_height="200dp"
+                android:background="@drawable/rectangle_border"/>
+
+            <Space
+                android:layout_height="match_parent"
+                android:layout_width="50dp"/>
+
+            <Button
+                android:id="@+id/takePhotoBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/take_photo"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_gravity="center_vertical"
+                android:background="@color/main_red"
+                android:textColor="@color/white"
+                android:padding="5dp"/>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_height="50dp"
+            android:layout_width="match_parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/text_for_vp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:textStyle="bold"
+            android:text="@string/enter_the_name_you_would_like_to_call_the_next_photo_you_take"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/text_for_vp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:textStyle="bold"
+            android:text="@string/this_photo_will_be_stored_in_the_linked_firebasestorage_for_use_later"/>
+
+        <EditText
+            android:id="@+id/chooseAPhotoNameET"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_name_for_photo"/>
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Used to organize other layouts -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Manage Volunteers & Logo-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/manage_volunteers"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="@dimen/headerSize"
+                android:textStyle="bold"
+                android:layout_gravity="bottom"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right">
+
+                <ImageView
+                    android:id="@+id/young_sam_logo"
+                    android:paddingEnd="8dp"
+                    android:paddingTop="25dp"
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/young_sam_logo"
+                    android:contentDescription="@string/young_samaritans_logo_descp"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <!-- Volunteers, ADD/Remove Btns, and ListView -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="30dp"
+            android:paddingStart="90dp"
+            android:paddingBottom="60dp"
+            android:paddingEnd="20dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="30sp"
+                    android:text="@string/volunteers"
+                    android:fontFamily="sans-serif-condensed"
+                    android:paddingEnd="170dp"/>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"/>
+
+                <Button
+                    android:id="@+id/addVolunteerBtn"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:textColor="@color/white"
+                    android:fontFamily="sans-serif-condensed"
+                    android:background="@color/main_red"
+                    android:text="@string/add_volunteer"/>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"/>
+
+                <Button
+                    android:id="@+id/removeVolunteerBtn"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:textColor="@color/white"
+                    android:fontFamily="sans-serif-condensed"
+                    android:background="@color/main_red"
+                    android:text="@string/remove_volunteer"/>
+
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/listOfVolunteers"
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                android:background="@drawable/rectangle_border"
+                android:scrollbars="vertical"/>
+
+        </LinearLayout>
+
+        <!-- Custom Divider -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="@color/main_red"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@null">
+        </ImageView>
+
+        <!-- Manage Events -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="50dp"
+            android:paddingTop="60dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/manage_events"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="@dimen/headerSize"
+                android:textStyle="bold"
+                android:layout_gravity="bottom"/>
+
+        </LinearLayout>
+
+        <!-- Events, ADD/Remove Btns, and ListView -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="30dp"
+            android:paddingStart="90dp"
+            android:paddingBottom="60dp"
+            android:paddingEnd="20dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="30sp"
+                    android:text="@string/upcoming_eventsL"
+                    android:fontFamily="sans-serif-condensed"
+                    android:paddingEnd="93dp"/>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"/>
+
+                <Button
+                    android:id="@+id/addUpcomingEventBtn"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:textColor="@color/white"
+                    android:background="@color/main_red"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="@string/add_event"/>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"/>
+
+                <Button
+                    android:id="@+id/removeUpcomingEventBtn"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:textColor="@color/white"
+                    android:background="@color/main_red"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="@string/remove_event"/>
+
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/upcomingEventList"
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                android:background="@drawable/rectangle_border"
+                android:scrollbars="vertical"/>
+
+        </LinearLayout>
+
+        <!-- Past Events, ADD/Remove Btns, and ListView -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingStart="90dp"
+            android:paddingBottom="30dp"
+            android:paddingEnd="20dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="30sp"
+                    android:text="@string/past_events"
+                    android:fontFamily="sans-serif-condensed"
+                    android:paddingEnd="157dp"/>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"/>
+
+                <Button
+                    android:id="@+id/addPastEventBtn"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:textColor="@color/white"
+                    android:background="@color/main_red"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="@string/add_event"/>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"/>
+
+                <Button
+                    android:id="@+id/removePastEventBtn"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:textColor="@color/white"
+                    android:background="@color/main_red"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="@string/remove_event"/>
+
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/pastEventsList"
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                android:background="@drawable/rectangle_border"
+                android:scrollbars="vertical"/>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="95dp"
+            android:layout_gravity="right">
+
+            <Button
+                android:id="@+id/openGalleryBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/open_gallery"
+                android:fontFamily="sans-serif-condensed"
+                android:padding="5dp"
+                android:textColor="@color/white"
+                android:background="@color/main_red"/>
+
+        </FrameLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+
+    </LinearLayout>
+
+    <!-- Footer Code // Socials and Such -->
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="7dp">
+
+            <ImageView
+                android:id="@+id/website"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/website"
+                android:clickable="true"
+                android:contentDescription="@null"
+                android:focusable="true" />
+
+            <Space
+                android:layout_width="15dp"
+                android:layout_height="wrap_content">
+            </Space>
+
+            <ImageView
+                android:id="@+id/instagram"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/instagram"
+                android:clickable="true"
+                android:contentDescription="@null"
+                android:focusable="true" />
+
+            <Space
+                android:layout_width="15dp"
+                android:layout_height="wrap_content">
+            </Space>
+
+            <ImageView
+                android:id="@+id/facebook"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/facebook"
+                android:clickable="true"
+                android:contentDescription="@null"
+                android:focusable="true" />
+
+            <Space
+                android:layout_width="15dp"
+                android:layout_height="wrap_content">
+            </Space>
+
+
+            <ImageView
+                android:id="@+id/email"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/email"
+                android:clickable="true"
+                android:contentDescription="@null"
+                android:focusable="true" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

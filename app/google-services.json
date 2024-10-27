@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "312053799447",
+    "project_id": "realandroidappproject",
+    "storage_bucket": "realandroidappproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:312053799447:android:7fe882eb8e4ae333881a52",
+        "android_client_info": {
+          "package_name": "edu.bloomu.realandroidfinalproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOfAilcNW1WVMZIXXx3SRjfF1a4pfJ6us"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

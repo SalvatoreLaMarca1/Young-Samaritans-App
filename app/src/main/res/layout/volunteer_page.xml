@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/upcoming_events"
+                android:textSize="@dimen/headerSize"
+                android:fontFamily="sans-serif-condensed"
+                android:textStyle="bold"
+                android:layout_gravity="bottom"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right">
+
+                <ImageView
+                    android:id="@+id/young_sam_logo"
+                    android:paddingEnd="8dp"
+                    android:paddingTop="25dp"
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/young_sam_logo"
+                    android:contentDescription="@string/young_samaritans_logo_descp"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <TableLayout
+            android:id="@+id/event_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="50dp"
+            android:paddingStart="15dp"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="50dp"
+            android:stretchColumns="0,1,2,3,4">
+
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/event"
+                    android:fontFamily="sans-serif-condensed"
+                    android:paddingStart="23dp"
+                    android:textStyle="bold"
+                    android:textSize="25sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/date"
+                    android:fontFamily="sans-serif-condensed"
+                    android:paddingEnd="15dp"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="25sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/time"
+                    android:fontFamily="sans-serif-condensed"
+                    android:paddingEnd="20dp"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="25sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/location"
+                    android:fontFamily="sans-serif-condensed"
+                    android:paddingEnd="10dp"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="25sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hours"
+                    android:fontFamily="sans-serif-condensed"
+                    android:layout_gravity="center"
+
+                    android:textStyle="bold"
+                    android:textSize="25sp"/>
+            </TableRow>
+        </TableLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingBottom="50dp">
+
+            <TextView
+                android:id="@+id/event_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="28dp"
+                android:textSize="@dimen/text_for_vp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed"
+                android:text="@string/sign_up_here">
+
+            </TextView>
+
+            <Spinner
+                android:id="@+id/eventsDropDown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp"
+                android:spinnerMode="dropdown">
+            </Spinner>
+
+            <Button
+                android:id="@+id/signUpButton"
+                android:layout_width="70dp"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_height="40dp"
+                android:text="@string/i_m_in"
+                android:textColor="@color/white"
+                android:background="@color/main_red"
+                />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="@color/main_red"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@null">
+        </ImageView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="50dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/user_stats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/user_s_information"
+                android:fontFamily="sans-serif-condensed"
+                android:textStyle="bold"
+                android:textSize="26sp"
+                android:paddingTop="30dp"
+                android:paddingStart="28dp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/number_of_hours_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:paddingStart="150dp"
+                android:textSize="@dimen/text_for_vp"
+                android:text="@string/hours">
+            </TextView>
+
+            <TextView
+                android:id="@+id/volunteer_hours"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:textSize="@dimen/text_for_vp">
+
+            </TextView>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp"/>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="15dp"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/number_of_events_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="28dp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="@dimen/text_for_vp"
+                android:text="@string/signed_up">
+            </TextView>
+
+            <ListView
+                android:id="@+id/eventsList"
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:textAlignment="center"
+                android:paddingStart="20dp">
+
+            </ListView>
+
+            <ListView
+                android:id="@+id/eventsHours"
+                android:layout_width="50dp"
+                android:layout_height="150dp"
+                android:textAlignment="center">
+            </ListView>
+
+            <ListView
+                android:id="@+id/eventsDates"
+                android:layout_width="120dp"
+                android:layout_height="150dp"
+                android:textAlignment="center">
+            </ListView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingBottom="50dp">
+
+            <TextView
+                android:id="@+id/past_events_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="28dp"
+                android:textSize="@dimen/text_for_vp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed"
+                android:text="@string/past_events">
+
+            </TextView>
+
+            <Spinner
+                android:id="@+id/past_events_dropdown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp">
+            </Spinner>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Footer Code // Socials and Such -->
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="7dp">
+
+
+            <ImageView
+                android:id="@+id/website"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/website"
+                android:clickable="true"
+                android:contentDescription="@null"
+                android:focusable="true" />
+
+            <Space
+                android:layout_width="15dp"
+                android:layout_height="wrap_content">
+            </Space>
+
+            <ImageView
+                android:id="@+id/instagram"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/instagram"
+                android:clickable="true"
+                android:contentDescription="@null"
+                android:focusable="true" />
+
+            <Space
+                android:layout_width="15dp"
+                android:layout_height="wrap_content">
+            </Space>
+
+            <ImageView
+                android:id="@+id/facebook"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/facebook"
+                android:clickable="true"
+                android:contentDescription="@null"
+                android:focusable="true" />
+
+            <Space
+                android:layout_width="15dp"
+                android:layout_height="wrap_content">
+            </Space>
+
+
+            <ImageView
+                android:id="@+id/email"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/email"
+                android:clickable="true"
+                android:contentDescription="@null"
+                android:focusable="true" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

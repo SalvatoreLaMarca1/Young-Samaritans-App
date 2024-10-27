@@ -1,0 +1,99 @@
+
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="500dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:background="@drawable/rectangle_border">
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="4"
+        android:padding="8dp"
+        android:layout_margin="8dp"
+        android:background="#ECECEC"
+        android:alignmentMode="alignMargins"
+        android:columnOrderPreserved="false">
+
+        <TextView
+            android:text="@string/username_"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:padding="8dp" />
+        <TextView
+            android:id="@+id/dialog_username_text"
+            android:paddingStart="22dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:padding="8dp" />
+        <TextView
+            android:text="@string/volunteer_hours_"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:padding="8dp" />
+        <TextView
+            android:id="@+id/dialog_vh_text"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:paddingStart="22dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:padding="8dp" />
+        <TextView
+            android:text="@string/signed_up_for_"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:padding="8dp" />
+
+        <ListView
+            android:id="@+id/signedUpEvents"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:scrollbars="vertical"
+            android:fadeScrollbars="false"/>
+
+
+        <TextView
+            android:text="@string/past_events_"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:padding="8dp" />
+
+        <ListView
+            android:id="@+id/pastEvents"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_row="3"
+            android:layout_column="1"
+            android:fadeScrollbars="false"
+            android:scrollbars="vertical"/>
+    </GridLayout>
+</FrameLayout>

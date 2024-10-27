@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/rectangle_border">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        />
+
+    <ImageView
+        android:id="@+id/young_sam_logo"
+        android:layout_width="500dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        android:src="@drawable/young_sam_logo"
+        android:contentDescription="@string/young_samaritans_logo_descp"
+        android:padding="20dp">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/YoungSamTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/volunteer_manager"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginTop="30dp"
+        android:textAlignment="center"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:layout_gravity="center"
+        android:paddingTop="130dp">
+
+        <TextView
+            android:id="@+id/loginTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_text"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+
+
+            android:layout_row="0"
+            android:layout_column="0" />
+
+        <EditText
+            android:id="@+id/username_input"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_username_text"
+            android:inputType="text"
+
+            android:textSize="20sp"
+
+            android:layout_marginEnd="120dp"
+
+            android:layout_row="1"
+            android:layout_column="0"
+            android:autofillHints="username"
+            />
+
+        <EditText
+            android:id="@+id/password_input"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_password_text"
+            android:inputType="textPassword"
+
+            android:textSize="20sp"
+
+            android:layout_row="2"
+            android:layout_column="0"
+            android:autofillHints="password"
+            />
+
+        <Button
+            android:id="@+id/reset_button"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:text="@string/clear"
+
+            android:background="@color/main_red"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+
+
+            android:layout_row="3"
+            android:layout_column="0"
+            />
+
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:text="@string/login_button_text"
+            android:textSize="16sp"
+            android:background="@color/main_red"
+            android:textColor="@color/white"
+
+            android:layout_marginStart="-300dp"
+
+            android:layout_row="3"
+            android:layout_column="1"
+
+            android:layout_marginBottom="200dp"
+            />
+
+    </GridLayout>
+</LinearLayout>

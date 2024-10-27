@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "778943097454",
+    "project_id": "realandroidfinalproject-d6199",
+    "storage_bucket": "realandroidfinalproject-d6199.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:778943097454:android:88936b434989f6e604547f",
+        "android_client_info": {
+          "package_name": "com.android.application"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCajNkM-5XkwXypBeG56BZyQWWdryfN2mY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="400dp"
+    android:layout_height="370dp"
+    android:gravity="center"
+    android:background="@drawable/rectangle_border">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/enterEventName"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_event_name"/>
+
+        <Space
+            android:layout_height="10dp"
+            android:layout_width="match_parent"/>
+
+        <EditText
+            android:id="@+id/enterEventDate"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_date_yyyy_mm_dd"/>
+
+        <Space
+            android:layout_height="10dp"
+            android:layout_width="match_parent"/>
+
+        <EditText
+            android:id="@+id/enterEventTime"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_time"/>
+
+        <Space
+            android:layout_height="10dp"
+            android:layout_width="match_parent"/>
+
+        <EditText
+            android:id="@+id/enterEventLocation"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_location"/>
+
+        <Space
+            android:layout_height="10dp"
+            android:layout_width="match_parent"/>
+
+        <EditText
+            android:id="@+id/enterEventHours"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_hours"/>
+
+        <Space
+            android:layout_height="20dp"
+            android:layout_width="match_parent"/>
+
+        <Button
+            android:id="@+id/dialog_add_event_btn"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:text="@string/add_event"
+            android:fontFamily="sans-serif-condensed"
+            android:background="@color/main_red"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+</RelativeLayout>
